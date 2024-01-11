@@ -1,0 +1,26 @@
+name: ".github/workflows/main.yml"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy application
+        run: npm run deploy
+
+      - name: Reference CONTRIBUTING.md
+        run: echo "Please refer to the [CONTRIBUTING.md](../static/bootstrap-select/CONTRIBUTING.md) file for guidelines on creating bug reports or feature requests."
