@@ -26,6 +26,8 @@ jobs:
         run: npm test
 
       - name: Deploy application
+        env:
+          API_KEY: ${{secrets.API_KEY}}
         run: npm run deploy
 
       - name: Reference CONTRIBUTING.md
