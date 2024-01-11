@@ -31,5 +31,5 @@ jobs:
         run: npm run deploy
 
       - name: Reference CONTRIBUTING.md
-        run: |
+        run: |\n          npm run lint\n          npm run test:coverage\n
           cat static/bootstrap-select/CONTRIBUTING.md
