@@ -1,7 +1,7 @@
 name: ".github/workflows/main.yml"
 
 on:
-  push:
+  pull_request::
     branches:
       - main
 
@@ -23,4 +23,5 @@ jobs:
         run: npm run deploy
 
       - name: Reference CONTRIBUTING.md
-        run: echo "Please refer to the [CONTRIBUTING.md](../static/bootstrap-select/CONTRIBUTING.md) file for guidelines on creating bug reports or feature requests."
+        run: |
+          cat static/bootstrap-select/CONTRIBUTING.md
