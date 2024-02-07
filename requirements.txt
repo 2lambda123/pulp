@@ -1,5 +1,5 @@
 Django==3.2.24
-djangorestframework==3.0.5
+djangorestframework==3.11.2
 nltk==3.6.6
 numpy==1.22.0
 pyenchant==1.6.6
