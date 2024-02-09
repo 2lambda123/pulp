@@ -24,6 +24,19 @@ class Command(BaseCommand) :
     help = 'loads topics from txt file into DB'
 
     def handle(self, *args, **options) :
+        """Function to handle and process data from a file containing topics and their corresponding keywords, and store them in a database.
+        Parameters:
+            - args (list): A list of arguments, where the first argument is the file containing topics and the second argument is the file containing the vocabulary index.
+            - options (dict): A dictionary of options, if applicable.
+        Returns:
+            - None: This function does not return any value, but instead stores the topics and their keywords in a database.
+        Processing Logic:
+            - Read the vocabulary index from the specified file.
+            - For each line in the file containing topics and keywords, extract the top 5 keywords and store them in a new file.
+            - Create a new Topic object and save it in the database.
+            - For each keyword in the list of keywords, create a new TopicKeyword object and save it in the database.
+            - Print the number of topics added to the database."""
+        
 
         NUM_KEYWORDS = 5
 
