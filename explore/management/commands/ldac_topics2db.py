@@ -28,7 +28,7 @@ class Command(BaseCommand) :
         NUM_KEYWORDS = 5
 
         with open(args[1]) as f :
-            vocab_index = dict(enumerate(f.readline().strip().split()))
+            vocab_index = dict(enumerate(f.readline(5_000_000).strip().split()))
 
         print >> stderr, "read %d words in vocabulary" % len(vocab_index)
 
